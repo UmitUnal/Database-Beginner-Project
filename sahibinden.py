@@ -8,7 +8,7 @@ def get_data_from_db(table_name):
     conn = psycopg2.connect(
         database="Sahibinden",
         user="postgres",
-        password="klayvert",
+        password="password",
         host="localhost",
         port="5432"
     )
@@ -100,7 +100,7 @@ def execute_query(query):
     conn = psycopg2.connect(
         database="Sahibinden",
         user="postgres",
-        password="klayvert",
+        password="password",
         host="localhost",
         port="5432"
     )
