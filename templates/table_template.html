@@ -1,0 +1,55 @@
+<!-- templates/table_template.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #F0F0F0;">
+    <header>
+        <h1>{{ page_title }}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/categories">Categories Table</a></li>
+            <li><a href="/comments">Comments Table</a></li>
+            <li><a href="/favories">Favories Table</a></li>
+            <li><a href="/orders">Orders Table</a></li>
+            <li><a href="/payments">Payments Table</a></li>
+            <li><a href="/products">Products Table</a></li>
+            <li><a href="/users">Users Table</a></li>
+            <li><a href="/query">Query Page</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>{{ page_title }}</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    {% for header in table_headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table_data %}
+                    <tr>
+                        {% for cell in row %}
+                            <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; Coded by Ferhat KÜRKÇÜOĞLU and Ümit ÜNAL</p>
+    </footer>
+</body>
+</html>
